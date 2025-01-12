@@ -68,8 +68,7 @@ CM1106H-NS</td>
 ## Prasības
 ## Algoritms
 ## Konceptu modelis
-![Konceptu modelis](https://github.com/viktorijagrietniece/ProLab/raw/main/konceptu_modelis.png)
-konceptu_modelis.png
+![Konceptu modelis](https://github.com/viktorijagrietniece/ProLab/raw/master/konceptu_modelis.png)
 ## Tehnoloģiju steks
 ![Tehnoloģiju steks](https://github.com/viktorijagrietniece/ProLab/raw/main/tehnologiju_steks.png)
 ## Programmatūras apraksts
