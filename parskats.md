@@ -96,6 +96,7 @@ CM1106H-NS</td>
 </table>
 
 ## Algoritms
+![Algoritms](https://github.com/viktorijagrietniece/ProLabFinal/raw/main/algoritms.png)
 
 ## Konceptu modelis
 ![Konceptu modelis](https://github.com/viktorijagrietniece/ProLab/raw/master/konceptu_modelis.png)
