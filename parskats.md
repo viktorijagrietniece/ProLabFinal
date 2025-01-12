@@ -65,80 +65,35 @@ CM1106H-NS</td>
 </table>
 
 # Tehniskais risinājums
+
+## Prasības
 <table>
   <tr>
     <td>1</td>
     <td>Mājaslapa</td>
     <td>Sniedz lietotājam iespēju ērti apskatīt gaisa kvalitāti telpā un ātri novērtēt situāciju.</td>
-    <td>
-      - Nodrošina ērtu piekļuvi informācijai.<br>
-      - Var izmantot jebkurā ierīcē ar interneta pieslēgumu.<br>
-      - Informācija tiek attēlota lietotājam saprotamā formātā.
-    </td>
-    <td>
-      - Nepieciešams interneta pieslēgums.<br>
-      - Informācija nav pieejama bez tehniskas ierīces.
-    </td>
   </tr>
   <tr>
     <td>2</td>
     <td>Gaisa kvalitātes prognoze</td>
     <td>Palīdz lietotājam pieņemt lēmumu, vai nepieciešams ieslēgt ventilāciju.</td>
-    <td>
-      - Nodrošina prognozes tuvākajām stundām.<br>
-      - Palīdz optimizēt ventilācijas lietošanu un enerģijas patēriņu.<br>
-      - Prognozes balstītas uz iepriekšējiem datiem un algoritmiem.
-    </td>
-    <td>
-      - Prognozes precizitāte var būt atkarīga no datu kvalitātes.<br>
-      - Nepieciešama datu uzkrāšana un apstrāde.
-    </td>
   </tr>
   <tr>
     <td>3</td>
     <td>Ieraksti par iepriekšējiem datiem</td>
     <td>Ļauj lietotājam apskatīt vēsturiskos gaisa kvalitātes datus, lai pārliecinātos par uzlabojumiem.</td>
-    <td>
-      - Nodrošina piekļuvi vēsturiskajiem datiem.<br>
-      - Palīdz analizēt gaisa kvalitātes tendences.<br>
-      - Dati pieejami grafiku vai tabulu formātā.
-    </td>
-    <td>
-      - Nepieciešama liela datu glabāšanas vieta.<br>
-      - Analīzei jābūt vizuāli saprotamai lietotājam.
-    </td>
   </tr>
   <tr>
     <td>4</td>
     <td>Gaisa kvalitātes grafiki</td>
     <td>Padara informācijas novērtēšanu ērtāku un vizuāli saprotamāku.</td>
-    <td>
-      - Vizuāli attēlo datus.<br>
-      - Palīdz ātri pamanīt izmaiņas gaisa kvalitātē.<br>
-      - Nodrošina interaktīvas analīzes iespējas.
-    </td>
-    <td>
-      - Sarežģīta datu interpretācija lietotājiem bez tehniskām zināšanām.<br>
-      - Nepieciešama atbilstoša grafiku atjaunināšana.
-    </td>
   </tr>
   <tr>
     <td>5</td>
     <td>Paziņojumi par sliktu gaisa kvalitāti</td>
     <td>Informē lietotāju, kad gaisa kvalitāte ir zemā līmenī, lai aizsargātu veselību.</td>
-    <td>
-      - Nodrošina tūlītējus brīdinājumus.<br>
-      - Palīdz ātri reaģēt uz izmaiņām.<br>
-      - Var pielāgot paziņojumu biežumu un sliekšņus.
-    </td>
-    <td>
-      - Nepieciešams atbilstošs sensora aprīkojums.<br>
-      - Var rasties nepatiesi pozitīvi vai negatīvi paziņojumi.
-    </td>
   </tr>
 </table>
-
-## Prasības
 ## Algoritms
 ## Konceptu modelis
 ![Konceptu modelis](https://github.com/viktorijagrietniece/ProLab/raw/master/konceptu_modelis.png)
