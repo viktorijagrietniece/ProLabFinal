@@ -142,4 +142,16 @@ Tiek iegūtas prognozētās vērtības gaisa kvalitātes mainīgajiem, kas tiek 
 
 ## Novērtēšanas rezultāti
 
+| Nr. | CO2 Predic | CO2 Actual | Temp Pred | Temp Actual | Humidity Pred | Humidity Actual | CO2 Error | Temperature Error | Humidity Error |
+|-----|------------|------------|-----------|-------------|---------------|-----------------|-----------|------------|----------------|
+| 1   | 874.454    | 873.66     | 23.3      | 23.4        | 42.57         | 43.6            | 0.090882  | 0.42735    | 2.362385321    |
+| 2   | 853.616    | 853.7      | 23.24     | 23.6        | 41.867        | 43.4            | 0.00984   | 1.525424   | 3.535258065    |
+| 3   | 836.772    | 854.18     | 23.437    | 23.4        | 41.703        | 43.7            | 2.037978  | 0.15812    | 4.56979405     |
+| 4   | 837.137    | 892.46     | 23.223    | 23.3        | 41.883        | 43.5            | 6.198933  | 0.330472   | 3.717214379    |
+| 5   | 875.684    | 862.01     | 23.11     | 23.6        | 41.647        | 43.6            | 1.586293  | 0.276271   | 4.479357798    |
+| **SUM Error** |            |            |           |             |               |                 | **1.984785** | **0.903527** | **3.732207323** |
+
+Iegūtajos prognozētajos gaisa kvalitātes mainīgo rezultātos var novērot, ka iegūtā vidējā kļūda ogļskābes dioksīda prognozei ir 1.98%, attiecīgi temperatūrai kļūda ir 0.9% un mitrumam 3.73%. 
+Tā kā visu mainīgo kļūdas iekļaujas <5% intervālā, varam secināt, ka gaisa kvalitātes mainīgo prognoze darbojās salīdzinoši precīzi.
+
 # Secinājumi
