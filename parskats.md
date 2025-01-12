@@ -94,11 +94,15 @@ CM1106H-NS</td>
     <td>Informē lietotāju, kad gaisa kvalitāte ir zemā līmenī, lai aizsargātu veselību.</td>
   </tr>
 </table>
+
 ## Algoritms
+
 ## Konceptu modelis
 ![Konceptu modelis](https://github.com/viktorijagrietniece/ProLab/raw/master/konceptu_modelis.png)
+
 ## Tehnoloģiju steks
 ![Tehnoloģiju steks](https://github.com/viktorijagrietniece/ProLabFinal/raw/main/tehnologiju_steks_final.png)
+
 ## Programmatūras apraksts
 
 # Novērtējums
