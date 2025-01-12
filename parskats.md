@@ -108,6 +108,38 @@ CM1106H-NS</td>
 
 # Novērtējums
 ## Novērtēšanas plans
+### Risinājuma novērtēšanas plāns
+
+#### Mērķis
+Izmantojot Raspberry PI ievāktos sensoru datus par gaisa mitrumu, temperatūru un CO2 daudzumu, veikt prognozi katrai no mērvienībām ar pietiekami lielu precizitāti, lai veiktu gaisa kvalitātes kontroli.
+
+#### Ieejas dati
+- **Datums**
+- **Laiks**
+- **Oglekļa dioksīda līmenis**
+- **Temperatūra**
+- **Mitruma līmenis**
+
+#### Novērtēšanas mēri
+Vidējā kļūda starp prognozētajām gaisa kvalitātes mainīgo vērtībām un sensoru iegūtajiem rezultātiem.
+
+#### Izejas mainīgie
+- CO2, mitruma un temperatūras prognozes
+
+#### Eksperimenta plāns
+Tiek iegūtas prognozētās vērtības gaisa kvalitātes mainīgajiem, kas tiek salīdzinātas ar faktiskajām gaisa vērtībām attiecīgajā laika posmā. Tiktu aprēķināta vidējā kļūda starp prognozētajām un faktiskajām vērtībām katram no mainīgajiem. Galā tiek aprēķināta vidējā kļūda pieciem individuāliem kļūdas aprēķiniem, lai noteiktu vidējo kļūdas vērtību procentos.
+
+#### Eksperimenta tabula
+
+| Nr. | CO2 Prediction | CO2 Actual | Temperature Prediction | Temp Actual | Humidity Prediction | Humidity Actual | CO2 Error | Temp Error | Humidity Error |
+|-----|----------------|------------|-------------------------|-------------|----------------------|-----------------|-----------|------------|----------------|
+| 1   |                |            |                         |             |                      |                 |           |            |                |
+| 2   |                |            |                         |             |                      |                 |           |            |                |
+| 3   |                |            |                         |             |                      |                 |           |            |                |
+| 4   |                |            |                         |             |                      |                 |           |            |                |
+| 5   |                |            |                         |             |                      |                 |           |            |                |
+| **SUM Error** | | | | | | | | | |
+
 ## Novērtēšanas rezultāti
 
 # Secinājumi
