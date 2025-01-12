@@ -76,7 +76,7 @@ CM1106H-NS</td>
   <tr>
     <td>2</td>
     <td>Gaisa kvalitātes prognoze</td>
-    <td>Palīdz lietotājam pieņemt lēmumu, vai nepieciešams ieslēgt ventilāciju.</td>
+    <td>Palīdz lietotājam uzraudzīt gaisa kvalitāti un pieņemt lēmumus telpu gaisa kvalitātes kontolei.</td>
   </tr>
   <tr>
     <td>3</td>
@@ -91,7 +91,7 @@ CM1106H-NS</td>
   <tr>
     <td>5</td>
     <td>Paziņojumi par sliktu gaisa kvalitāti</td>
-    <td>Informē lietotāju, kad gaisa kvalitāte ir zemā līmenī, lai aizsargātu veselību.</td>
+    <td>Informē lietotāju, kad gaisa kvalitāte ir zemā līmenī, lai pasargātu veselību.</td>
   </tr>
 </table>
 
