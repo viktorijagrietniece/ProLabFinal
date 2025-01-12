@@ -105,6 +105,7 @@ CM1106H-NS</td>
 ![Tehnoloģiju steks](https://github.com/viktorijagrietniece/ProLabFinal/raw/main/tehnologiju_steks_final.png)
 
 ## Programmatūras apraksts
+Lai programmatūra izpildītu visus uzstādītos nosacījumus, tika izveidota pieslēgšanās lapa, kurā lietotāji var pieslēgties, vai, ja tiem nav profila, reģistŗēties. Reģistrētie lietotāji tiek pielaisti galvenajai lapai, kurā tie spēj apskatīt sensoru rādījumus, pievienot un dzēst sensorus, ja tiem ir admina pieeja, kā arī apskatīt sensoru iegūtos datus ar atpakaļ ejošu datumu un saņemt brīdinājumus par gaisa kvalitātes mainīgo novirzi no ieteiktajām normām.
 
 # Novērtējums
 ## Novērtēšanas plans
@@ -155,3 +156,4 @@ Iegūtajos prognozētajos gaisa kvalitātes mainīgo rezultātos var novērot, k
 Tā kā visu mainīgo kļūdas iekļaujas <5% intervālā, varam secināt, ka gaisa kvalitātes mainīgo prognoze darbojās salīdzinoši precīzi.
 
 # Secinājumi
+Darba gaitā tika izstrādāta programmatūra, kas izpilda iepriekš izvirzītos nosacījumus gaisa monitoringa lietotnei. Prognozēšanas rezultāti uzrāda labas programmatūras prognozēšanas spējas - kļūdai uz prognozētajam vērtībām nepārsniedzot 5% slieksni.
