@@ -306,14 +306,37 @@ const sensor3CO2Chart = createChart(
     1000,
     1500
 );
+    const sensor4TemperatureChart = createChart(
+    document.getElementById('sensor4TemperatureChart').getContext('2d'),
+    'Temperature',
+    'rgba(255, 99, 132, 1)',
+    24,
+    27
+);
+const sensor4HumidityChart = createChart(
+    document.getElementById('sensor4HumidityChart').getContext('2d'),
+    'Humidity',
+    'rgba(54, 162, 235, 1)',
+    60,
+    70
+);
+const sensor4CO2Chart = createChart(
+    document.getElementById('sensor4CO2Chart').getContext('2d'),
+    'CO2',
+    'rgba(75, 192, 192, 1)',
+    1000,
+    1500
+);
     async function updateCharts() {
         const sensor1Data = await fetchSensorData("sensor_1");
         const sensor2Data = await fetchSensorData("sensor_2");
         const sensor3Data = await fetchSensorData("sensor_3");
+        const sensor4Data = await fetchSensorData("sensor_4");
         const sensor1Prognosis = generatePrognosis(sensor1Data);
         const sensor2Prognosis = generatePrognosis(sensor2Data);
         const sensor3Prognosis = generatePrognosis(sensor3Data);
-
+        const sensor4Prognosis = generatePrognosis(sensor4Data);
+        console.log("Fetched sensor 4 data:", sensor4Data);
 
         if (sensor1Data.length) {
             updateChart(
@@ -368,6 +391,23 @@ const sensor3CO2Chart = createChart(
                 sensor3Prognosis.co2
             );
         }
+        if (sensor4Data.length) {
+                    updateChart(
+                        sensor4TemperatureChart,
+                        sensor4Data.map(entry => ({ x: entry.time, y: entry.temperature })),
+                        sensor4Prognosis.temperature
+                    );
+                    updateChart(
+                        sensor4HumidityChart,
+                        sensor4Data.map(entry => ({ x: entry.time, y: entry.humidity })),
+                        sensor4Prognosis.humidity
+                    );
+                    updateChart(
+                        sensor4CO2Chart,
+                        sensor4Data.map(entry => ({ x: entry.time, y: entry.co2 })),
+                        sensor4Prognosis.co2
+                    );
+                }
     }
 
 function updateChart(chart, data, prognosis = null) {
@@ -549,9 +589,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
-
-
-
