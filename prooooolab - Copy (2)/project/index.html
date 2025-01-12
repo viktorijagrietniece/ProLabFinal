@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Content box styling */
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            width: 600px;
+            height: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Adds spacing between elements */
+        }
+
+        .content-box h1 {
+            margin-bottom: 5px;
+            font-size: 1.8em;
+        }
+
+        .content-box .description {
+            font-size: 1em;
+            margin-top 10px; /* Smaller gap for closer alignment */
+        }
+
+        .content-box h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .content-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-box input, .content-box button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .content-box input {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-box button {
+            background-color: #6c00a2;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-box button:hover {
+            background-color: #8d00cc;
+        }
+
+        .content-box .registration {
+            font-size: 1em;
+            margin-top: 5px;
+
+        }
+
+        .content-box .about-us-link {
+            font-size: 1em;
+            color: #ff6600;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .content-box .about-us-link:hover {
+            text-decoration: underline;
+        }
+        .create-account {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        .create-account:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<div class="gradients-container">
+    <div class="big-blob">
+        <div class="blob-part blob-1"></div>
+        <div class="blob-part blob-2"></div>
+        <div class="blob-part blob-3"></div>
+        <div class="blob-part blob-4"></div>
+        <div class="blob-part blob-5"></div>
+        <div class="blob-part blob-6"></div>
+        <div class="blob-part blob-7"></div>
+        <div class="blob-part blob-8"></div>
+    </div>
+</div>
+
+<!-- Black Transparent Box -->
+<div class="content-box">
+    <h1>Welcome back to AetherAir</h1>
+    <p class="description">The real-time air quality monitoring system of Riga Technical University.</p>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+    </form>
+    <p class="registration">Not registered? <a href="/register.html" class="create-account">Create an account</a></p>
+    <a href="/about.html" class="about-us-link">About Us</a>
+</div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* Content box styling */
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            width: 600px;
+            height: 620px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Adds spacing between elements */
+        }
+    .content-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-box input, .content-box button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .content-box input {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-box button {
+            background-color: #6c00a2;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-box button:hover {
+            background-color: #8d00cc;
+        }
+    .content-box select {
+    padding: 15px; /* Match the padding of the input fields */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.9);
+    height: 52px; /* Adjust to match the height of the input fields if necessary */
+    appearance: none; /* Removes the default browser styles for dropdowns */
+}
+
+</style>
+
+</head>
+<body>
+<div class="gradients-container">
+    <div class="big-blob">
+        <div class="blob-part blob-1"></div>
+        <div class="blob-part blob-2"></div>
+        <div class="blob-part blob-3"></div>
+        <div class="blob-part blob-4"></div>
+        <div class="blob-part blob-5"></div>
+        <div class="blob-part blob-6"></div>
+        <div class="blob-part blob-7"></div>
+        <div class="blob-part blob-8"></div>
+    </div>
+</div>
+
+<div class="content-box">
+    <h2>Create an account</h2>
+    <!-- This div will display success or error messages -->
+
+
+    <form id="registerForm">
+        <input type="text" id="name" placeholder="First Name" required>
+        <input type="text" id="lastname" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <input type="text" id="phone" placeholder="Phone Number (+371XXXXXXXXX)" required>
+        <select id="role" required>
+            <option value="viewer">Viewer</option>
+            <option value="technician">Technician</option>
+            <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+<script src="/static/js/register.js"></script>
+</body>
+</html>

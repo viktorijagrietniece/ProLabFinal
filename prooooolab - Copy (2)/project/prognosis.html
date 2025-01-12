@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prognosis Page</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+<div>
+    <h2>Prognosis Page</h2>
+    <button id="fetchPrognosis">Get Prognosis</button>
+
+    <div id="error" style="color: red;"></div>
+
+    <div id="prognosis" style="display: none;">
+        <p id="predictedCO2"></p>
+        <p id="predictedTemperature"></p>
+        <p id="predictedHumidity"></p>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="prognosisChart"></canvas>
+    </div>
+</div>
+<script src="/static/js/prognosis.js"></script>
+</body>
+</html>

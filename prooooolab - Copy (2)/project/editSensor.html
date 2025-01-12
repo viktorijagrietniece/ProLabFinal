@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Sensor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+<div class="header">
+    <h1>Edit Sensor</h1>
+</div>
+<main>
+    <div class="chart-wrapper">
+    <div class="chart-header">
+        <span class="location">{{ location }}</span>
+    </div>
+    <button class="toggle-button">
+        <img src="/static/Buttons/arrowhead-right-solid-svgrepo-com.svg" alt="Toggle">
+    </button>
+    <div class="tabs hidden">
+        <span class="tab-button active" data-target="{{ sensor_id }}-temperature">Temperature</span>
+        <span class="tab-button" data-target="{{ sensor_id }}-humidity">Humidity</span>
+        <span class="tab-button" data-target="{{ sensor_id }}-co2">CO2</span>
+    </div>
+    <div class="chart-container hidden" id="{{ sensor_id }}-temperature">
+        <canvas id="{{ sensor_id }}TemperatureChart"></canvas>
+    </div>
+    <div class="chart-container hidden" id="{{ sensor_id }}-humidity">
+        <canvas id="{{ sensor_id }}HumidityChart"></canvas>
+    </div>
+    <div class="chart-container hidden" id="{{ sensor_id }}-co2">
+        <canvas id="{{ sensor_id }}CO2Chart"></canvas>
+    </div>
+</div>
+
+</main>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

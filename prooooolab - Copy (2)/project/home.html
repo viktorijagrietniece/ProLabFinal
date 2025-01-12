@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div>
+    <h1>Home Page</h1>
+    <p id="welcomeMessage">Welcome to the home page!</p>
+        <button onclick="location.href='about.html';">Go to About Page</button>
+        <button onclick="location.href='prognosis.html';">Go to Prognosis Page</button>
+        <button onclick="location.href='register.html';">Go to Register Page</button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userEmail = sessionStorage.getItem("userEmail");
+      if (userEmail) {
+        document.getElementById("welcomeMessage").innerText = `Welcome, ${userEmail}!`;
+      }
+    });
+    document.getElementById("goToPrognosis").addEventListener("click", () => {
+      window.location.href = "/prognosis";
+    });
+
+    document.getElementById("goToAbout").addEventListener("click", () => {
+      window.location.href = "/about";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+flask
+flask-cors
+werkzeug
+firebase-admin
+pandas
+sqlite3
+
+#pip install -r requirements.txt

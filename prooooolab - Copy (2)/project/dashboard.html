@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<div class="header">
+    <h1 style="color: white; text-align: center; line-height: 90px; margin: 0;">Dashboard</h1>
+</div>
+<button class="notification-button">
+    <img src="/static/Buttons/notifications-outline-svgrepo-com.svg" alt="Notifications">
+</button>
+<main>
+    <div class="sidebar" id="sidebar">
+        <img src="/static/Buttons/file.png" alt="Sidebar Icon" class="sidebar-top-icon">
+        <p class="user-name">Jānis Paraudziņš</p>
+        <button class="logout-btn">Log Out</button>
+        <button class="about-us-btn">About Us</button>
+    </div>
+    <div class="gradients-container">
+        <div class="big-blob">
+            <div class="blob-part blob-1"></div>
+            <div class="blob-part blob-2"></div>
+            <div class="blob-part blob-3"></div>
+            <div class="blob-part blob-4"></div>
+        </div>
+    </div>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prevMonth" class="calendar-nav">&lt;</button>
+            <span id="calendarMonth"></span>
+            <button id="nextMonth" class="calendar-nav">&gt;</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+    </div>
+    <div>
+        <h2 style="text-align: center;"></h2>
+        <div class="chart-wrapper">
+            <div class="chart-header">
+                <span class="location">Zunda Krastmala 8 - 302</span>
+            </div>
+            <button class="toggle-button">
+                <img src="/static/Buttons/arrowhead-right-solid-svgrepo-com.svg" alt="Toggle">
+            </button>
+            <button class="edit-location-button" data-sensor-id="1">
+                <img src="/static/Buttons/edit-svgrepo-com.svg" alt="Edit Location">
+            </button>
+            <button class="delete-chart-button" data-sensor-id="1">
+                <img src="/static/Buttons/delete-2-svgrepo-com.svg" alt="Delete">
+            </button>
+            <div id="deleteModal1" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Confirm Deletion</h3>
+                    <p>Are you sure you want to delete this chart? This action cannot be undone.</p>
+                    <button class="confirm-delete" data-sensor-id="1">Delete</button>
+                    <button class="cancel-delete" data-sensor-id="1">Cancel</button>
+                </div>
+            </div>
+            <div id="editLocationModal1" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Edit Location</h3>
+                    <input type="text" id="locationInput1" placeholder="Enter new location">
+                    <button id="saveLocationButton1">Save</button>
+                </div>
+            </div>
+            <div class="tabs hidden">
+                <span class="tab-button active" data-target="sensor1-temperature">Temperature</span>
+                <span class="tab-button" data-target="sensor1-humidity">Humidity</span>
+                <span class="tab-button" data-target="sensor1-co2">CO2</span>
+            </div>
+            <div class="chart-container hidden" id="sensor1-temperature">
+                <canvas id="sensor1TemperatureChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor1-humidity">
+                <canvas id="sensor1HumidityChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor1-co2">
+                <canvas id="sensor1CO2Chart"></canvas>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <div class="chart-header">
+                <span class="location">Zunda Krastmala 10 - 121</span>
+            </div>
+            <button class="toggle-button">
+                <img src="/static/Buttons/arrowhead-right-solid-svgrepo-com.svg" alt="Toggle">
+            </button>
+            <button class="edit-location-button" data-sensor-id="2">
+                <img src="/static/Buttons/edit-svgrepo-com.svg" alt="Edit Location">
+            </button>
+            <button class="delete-chart-button" data-sensor-id="1">
+                <img src="/static/Buttons/delete-2-svgrepo-com.svg" alt="Delete">
+            </button>
+            <div id="deleteModal2" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Confirm Deletion</h3>
+                    <p>Are you sure you want to delete this chart? This action cannot be undone.</p>
+                    <button class="confirm-delete" data-sensor-id="1">Delete</button>
+                    <button class="cancel-delete" data-sensor-id="1">Cancel</button>
+                </div>
+            </div>
+            <div id="editLocationModal2" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Edit Location</h3>
+                    <input type="text" id="locationInput2" placeholder="Enter new location">
+                    <button id="saveLocationButton2">Save</button>
+                </div>
+            </div>
+            <div class="tabs hidden">
+                <span class="tab-button active" data-target="sensor2-temperature">Temperature</span>
+                <span class="tab-button" data-target="sensor2-humidity">Humidity</span>
+                <span class="tab-button" data-target="sensor2-co2">CO2</span>
+            </div>
+            <div class="chart-container hidden" id="sensor2-temperature">
+                <canvas id="sensor2TemperatureChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor2-humidity">
+                <canvas id="sensor2HumidityChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor2-co2">
+                <canvas id="sensor2CO2Chart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-wrapper">
+            <div class="chart-header">
+                <span class="location">Zunda Krastmala 8 - 107</span>
+            </div>
+            <button class="toggle-button">
+                <img src="/static/Buttons/arrowhead-right-solid-svgrepo-com.svg" alt="Toggle">
+            </button>
+            <button class="edit-location-button" data-sensor-id="3">
+                <img src="/static/Buttons/edit-svgrepo-com.svg" alt="Edit Location">
+            </button>
+            <button class="delete-chart-button" data-sensor-id="1">
+                <img src="/static/Buttons/delete-2-svgrepo-com.svg" alt="Delete">
+            </button>
+            <div id="deleteModal3" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Confirm Deletion</h3>
+                    <p>Are you sure you want to delete this chart? This action cannot be undone.</p>
+                    <button class="confirm-delete" data-sensor-id="1">Delete</button>
+                    <button class="cancel-delete" data-sensor-id="1">Cancel</button>
+                </div>
+            </div>
+            <div id="editLocationModal3" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" data-sensor-id="1">&times;</span>
+                    <h3>Edit Location</h3>
+                    <input type="text" id="locationInput3" placeholder="Enter new location">
+                    <button id="saveLocationButton3">Save</button>
+                </div>
+            </div>
+            <div class="tabs hidden">
+                <span class="tab-button active" data-target="sensor3-temperature">Temperature</span>
+                <span class="tab-button" data-target="sensor3-humidity">Humidity</span>
+                <span class="tab-button" data-target="sensor3-co2">CO2</span>
+            </div>
+            <div class="chart-container hidden" id="sensor3-temperature">
+                <canvas id="sensor3TemperatureChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor3-humidity">
+                <canvas id="sensor3HumidityChart"></canvas>
+            </div>
+            <div class="chart-container hidden" id="sensor3-co2">
+                <canvas id="sensor3CO2Chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="alert-panel">
+        <h3>Sensors Require Attention</h3>
+        <div id="alert-list"></div>
+    </div>
+</main>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
