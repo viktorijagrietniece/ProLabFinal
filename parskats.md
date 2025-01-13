@@ -166,11 +166,11 @@ Tā kā visu mainīgo kļūdas iekļaujas <5% intervālā, varam secināt, ka ga
   </tr>
   <tr>
     <td>Agate Šarna</td>
-    <td></td>
+    <td>FLask un nginx implementācija un konfigurēšana, algoritma izstrāde, back-end izstrāde, pārskata veidošana un atskaišu izpilde</td>
   </tr>
   <tr>
     <td>Anastasija Reusa</td>
-    <td></td>
+    <td>Konceptu modeļa ieviešana, piedalīšanās idejas izstrādē, eksperimenta plāna izveide, lietotāju prasību saraksta ieviešana</td>
   </tr>
   <tr>
     <td>Lauris Jauntēvs</td>
