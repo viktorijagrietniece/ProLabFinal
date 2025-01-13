@@ -589,3 +589,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const logoutButton = document.querySelector(".logout-btn");
+    logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("authToken");
+        sessionStorage.removeItem("authToken");
+        window.location.href = "/index.html";
+    });
+});
