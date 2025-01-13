@@ -154,6 +154,33 @@ Tiek iegūtas prognozētās vērtības gaisa kvalitātes mainīgajiem, kas tiek 
 
 Iegūtajos prognozētajos gaisa kvalitātes mainīgo rezultātos var novērot, ka iegūtā vidējā kļūda ogļskābes dioksīda prognozei ir 1.98%, attiecīgi temperatūrai kļūda ir 0.9% un mitrumam 3.73%. 
 Tā kā visu mainīgo kļūdas iekļaujas <5% intervālā, varam secināt, ka gaisa kvalitātes mainīgo prognoze darbojās salīdzinoši precīzi.
+# Studentu ieguldījums projekta izstrādē
+<table>
+  <tr>
+    <th>Students</th>
+    <th>Ieguldījums projektā</th>
+  </tr>
+   <tr>
+    <td>Viktorija Grietniece</td>
+    <td>Raspberry pi konfigurācija, firebase datubāzes izveide, projekta vadība, front-end izstrāde, reģistrācijas sistēmas izveide, datu vizuāls atspoguļojums, CRUD</td>
+  </tr>
+  <tr>
+    <td>Agate Šarna</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Anastasija Reusa</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Lauris Jauntēvs</td>
+    <td>Piedalīšanās kopsapulcēs, ideju dokumenta papildināšana, algoritma risinājuma piedāvājums</td>
+  </tr>
+  <tr>
+    <td>Frīdis Ludiņš</td>
+    <td>Piedalīšanās kopsapulcēs</td>
+  </tr>
+</table>  
 
-# Secinājumi
+#  Secinājumi
 Darba gaitā tika izstrādāta programmatūra, kas izpilda iepriekš izvirzītos nosacījumus gaisa monitoringa lietotnei. Prognozēšanas rezultāti uzrāda labas programmatūras prognozēšanas spējas - kļūdai uz prognozētajam vērtībām nepārsniedzot 5% slieksni.
